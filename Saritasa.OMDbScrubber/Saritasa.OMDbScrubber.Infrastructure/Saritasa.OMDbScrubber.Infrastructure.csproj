@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Saritasa.OMDbScrubber.DataAccess\Saritasa.OMDbScrubber.DataAccess.csproj" />
+    <ProjectReference Include="..\Saritasa.OMDbScrubber.Domain\Saritasa.OMDbScrubber.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Saritasa.OMDbScrubber.Web.Models.MovieViewModel>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List of movies</h1>
+
+<hr />
+
+<form method="get" asp-controller="Movies" asp-action="List">
+    <label>Rating above:</label>
+    <input name="ratingAbove" type="number" min="0" value="@ViewData["MoviesRatingAbove"]"/>
+
+    <label>Runtime mins above:</label>
+    <input name="runtimeMinsAbove" type="number" min="0" value="@ViewData["MoviesRuntimeMinsAbove"]">
+
+    <label>Runtime mins below:</label>
+    <input name="runtimeMinsBelow" type="number" min="1" value="@ViewData["MoviesRuntimeMinsBelow"]"/>
+
+    <label>Has actor:</label>
+    <input name="hasActor" type="text" value="@ViewData["MoviesHasActor"]"/>
+
+    <p><button type="submit">Search</button></p>
+</form>
+
+<form method="get" asp-controller="Movies" asp-action="List">
+    <p><button type="submit">All movies</button></p>
+</form>
+<hr />
+
+<form asp-controller="Home" asp-action="Index">
+    <p><button type="submit">Go to the home page</button></p>
+</form>
+
+<table cellspacing="50" align="center">
+    <thead>
+        <tr>
+            <th>Imdb Id</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Runtime Mins</th>
+            <th>Genre</th>
+            <th>Actors</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Movie.ImdbId</td>
+                <td>@item.Movie.Title</td>
+                <td>@item.Movie.ReleaseDate.Value.Year</td>
+                <td>@item.Movie.RuntimeMins</td>
+                <td>@item.Movie.Genre</td>
+                <td>@item.Actors.Select(a => a.Name)?.Aggregate((s1, s2) => s1 + ", " + s2)</td>
+                <td>
+                    @{ 
+                        if (item.Movie.ImdbRating == 0.0m)
+                        {
+                            <span>N/A</span>
+                        }
+                        else
+                        {
+                            <span>@item.Movie.ImdbRating</span>
+                        }
+                    }
+                </td>
+            </tr>
+         }
+    </tbody>
+</table>

@@ -1,0 +1,9 @@
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.deps.json
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.dll
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.pdb
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.csprojAssemblyReference.cache
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.csproj.CoreCompileInputs.cache
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.AssemblyInfoInputs.cache
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.AssemblyInfo.cs
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.dll
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Domain\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.pdb

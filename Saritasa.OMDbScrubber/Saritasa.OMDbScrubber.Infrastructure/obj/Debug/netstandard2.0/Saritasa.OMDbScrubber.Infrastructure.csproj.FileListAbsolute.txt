@@ -1,0 +1,14 @@
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.deps.json
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.dll
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.pdb
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.DataAccess.dll
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.dll
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.DataAccess.pdb
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\bin\Debug\netstandard2.0\Saritasa.OMDbScrubber.Domain.pdb
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.csprojAssemblyReference.cache
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.AssemblyInfoInputs.cache
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.AssemblyInfo.cs
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.csproj.CopyComplete
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.dll
+C:\Tasks\baldin\src\Saritasa.OMDbScrubber\Saritasa.OMDbScrubber.Infrastructure\obj\Debug\netstandard2.0\Saritasa.OMDbScrubber.Infrastructure.pdb

@@ -1,0 +1,70 @@
+﻿<Window x:Class="Saritasa.JiraDayIssues.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converters="clr-namespace:Saritasa.JiraDayIssues.WPF.Converters"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        DataContext="{Binding MainViewModel, Source={StaticResource Locator}}"
+        Title="{Binding Title}" Height="450" Width="800">
+    <Window.Resources>
+        <converters:JiraTimeConverter x:Key="jiraTimeConverter" />
+        <converters:StackPanelVisibilityConverter x:Key="stackPanelVisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="30" Margin="0,10,0,0" VerticalAlignment="Top" Width="248" Grid.ColumnSpan="2" Grid.Row="1">
+            <Label Content="Date:" FontSize="15" FontWeight="Bold"/>
+            <DatePicker x:Name="datePicker" Width="200" Height="25" SelectedDate="{Binding SelectedDate}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectedDateChanged">
+                        <i:InvokeCommandAction Command="{Binding LoadIssuesAsyncCommand}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </DatePicker>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,10,0,0" Grid.Row="2">
+            <ListView Height="Auto" MinHeight="310" ItemsSource="{Binding Issues}" SelectedItem="{Binding SelectedIssue}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Issues" Width="Auto"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel x:Name="stackPanel" Orientation="Horizontal" Visibility="{Binding IsVisibleLoadingPanel, Converter={StaticResource stackPanelVisibilityConverter}}">
+                <Label Content="Loading issues..."/>
+                <Button Content="Cancel">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding CancelRequestCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,10,0,0" Grid.Row="2">
+            <ListView Height="Auto" MinHeight="310" ItemsSource="{Binding SelectedIssue.Worklogs}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Worklog" Width="Auto" DisplayMemberBinding="{Binding Comment}"/>
+                        <GridViewColumn Header="Time" Width="Auto"  DisplayMemberBinding="{Binding TimeSpentSeconds, Converter={StaticResource jiraTimeConverter}}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

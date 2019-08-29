@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Saritasa.UnrealEstate.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Saritasa.UnrealEstate.Web.Controllers.AccountController">
+            <summary>
+            Account api controller.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.AccountController.#ctor(Saritasa.Tools.Messages.Abstractions.IMessagePipelineService,Saritasa.UnrealEstate.Domain.EstateContext.Abstract.ITokenGenerator,Microsoft.AspNetCore.Identity.UserManager{Saritasa.UnrealEstate.Domain.EstateContext.Entities.User})">
+            <summary>
+            Constructor of the <seealso cref="T:Saritasa.UnrealEstate.Web.Controllers.AccountController"/> class.
+            </summary>
+            <param name="pipelineService">Pipeline service.</param>
+            <param name="tokenGenerator">Token generator.</param>
+            <param name="userManager">User manager.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.AccountController.LoginAsync(Saritasa.UnrealEstate.Domain.EstateContext.Dtos.LoginDto)">
+            <summary>
+            Login user.
+            </summary>
+            <param name="loginInfo">Login info.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.AccountController.SendForgotPasswordEmailAsync(System.String)">
+            <summary>
+            Send forgot user password email.
+            </summary>
+            <param name="email">Email.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.AccountController.ResetPasswordAsync(Saritasa.UnrealEstate.Domain.EstateContext.Commands.UserCommands.ResetUserPasswordCommand)">
+            <summary>
+            Reset user password.
+            </summary>
+            <param name="command">Reset user password command.</param>
+        </member>
+        <member name="T:Saritasa.UnrealEstate.Web.Controllers.CommentsController">
+            <summary>
+            Comments api controller.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.CommentsController.#ctor(Saritasa.Tools.Messages.Abstractions.IMessagePipelineService,Microsoft.AspNetCore.Identity.UserManager{Saritasa.UnrealEstate.Domain.EstateContext.Entities.User})">
+            <summary>
+            Constructor of the <seealso cref="T:Saritasa.UnrealEstate.Web.Controllers.CommentsController"/> class.
+            </summary>
+            <param name="pipelineService">Message pipeline service.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.CommentsController.AddCommentAsync(Saritasa.UnrealEstate.Domain.EstateContext.Commands.CommentCommands.CreateCommentCommand)">
+            <summary>
+            Create new comment.
+            </summary>
+            <param name="command">Create comment command.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.CommentsController.UpdateCommentAsync(System.Int64,Saritasa.UnrealEstate.Domain.EstateContext.Commands.CommentCommands.UpdateCommentCommand)">
+            <summary>
+            Update comment.
+            </summary>
+            <param name="commentId">Comment Id.</param>
+            <param name="command">Update comment command.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.CommentsController.DeleteCommentAsync(System.Int64)">
+            <summary>
+            Delete comment.
+            </summary>
+            <param name="commentId">Comment Id.</param>
+        </member>
+        <member name="T:Saritasa.UnrealEstate.Web.Controllers.ListingsController">
+            <summary>
+            Listings api controller.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.#ctor(Saritasa.Tools.Messages.Abstractions.IMessagePipelineService,Microsoft.AspNetCore.Identity.UserManager{Saritasa.UnrealEstate.Domain.EstateContext.Entities.User})">
+            <summary>
+            Constructor of the <seealso cref="T:Saritasa.UnrealEstate.Web.Controllers.ListingsController"/> class.
+            </summary>
+            <param name="pipelineService">Message pipeline service.</param>
+            <param name="userManager">User manager.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.GetListingsAsync">
+            <summary>
+            Get listings.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.GetListingByIdAsync(System.Int64)">
+            <summary>
+            Get listing by Id.
+            </summary>
+            <param name="listingId">Listing Id.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.GetListingCommentsAsync(System.Int64)">
+            <summary>
+            Get listing comments.
+            </summary>
+            <param name="listingId">Listing Id.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.AddListingAsync(Saritasa.UnrealEstate.Domain.EstateContext.Commands.ListingCommands.CreateListingCommand)">
+            <summary>
+            Create new listing.
+            </summary>
+            <param name="command">Create listing command.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.UpdateListingAsync(System.Int64,Saritasa.UnrealEstate.Domain.EstateContext.Commands.ListingCommands.UpdateListingCommand)">
+            <summary>
+            Update listing.
+            </summary>
+            <param name="listingId">Listing Id.</param>
+            <param name="command">Update listing command.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.DeleteListingAsync(System.Int64)">
+            <summary>
+            Delete listing.
+            </summary>
+            <param name="listingId">Listing Id.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.EnableListingAsync(System.Int64)">
+            <summary>
+            Enable listing.
+            </summary>
+            <param name="listingId">Listing Id.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.MakeListingBidAsync(System.Int64,Saritasa.UnrealEstate.Domain.EstateContext.Commands.ListingCommands.MakeListingBidCommand)">
+            <summary>
+            Make listing bid.
+            </summary>
+            <param name="listingId">Listing Id.</param>
+            <param name="command">Make listing bid command.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.ListingsController.AddOrRemoveListingFromFavoritesAsync(System.Int64,System.Boolean)">
+            <summary>
+            Add or remove listing from favorites.
+            </summary>
+            <param name="listingId">Listing Id.</param>
+            <param name="isFavorite">Is this favorite?.</param>
+        </member>
+        <member name="T:Saritasa.UnrealEstate.Web.Controllers.UsersController">
+            <summary>
+            Users api controller.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.UsersController.#ctor(Saritasa.Tools.Messages.Abstractions.IMessagePipelineService,Microsoft.AspNetCore.Identity.UserManager{Saritasa.UnrealEstate.Domain.EstateContext.Entities.User})">
+            <summary>
+            Constuctor of the <seealso cref="T:Saritasa.UnrealEstate.Web.Controllers.UsersController"/> class.
+            </summary>
+            <param name="pipelineService">Pipeline service.</param>
+            <param name="userManager">User manager.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.UsersController.GetUsersAsync(Saritasa.UnrealEstate.Domain.EstateContext.Services.Filters.UserFilter)">
+            <summary>
+            Get users.
+            </summary>
+            <param name="filter">User filter.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.UsersController.GetUserByIdAsync(System.String)">
+            <summary>
+            Get user by Id.
+            </summary>
+            <param name="userId">User Id.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.UsersController.GetCurrentUser">
+            <summary>
+            Get current logged user.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.UsersController.AddUserAsync(Saritasa.UnrealEstate.Domain.EstateContext.Commands.UserCommands.CreateUserCommand)">
+            <summary>
+            Create new user.
+            </summary>
+            <param name="command">Create user command.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Controllers.UsersController.UpdateCurrentUserAsync(Saritasa.UnrealEstate.Domain.EstateContext.Commands.UserCommands.UpdateCurrentUserCommand)">
+            <summary>
+            Update current logged user.
+            </summary>
+            <param name="command">Update current user command.</param>
+        </member>
+        <member name="T:Saritasa.UnrealEstate.Web.Program">
+            <summary>
+            Program class.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Program.Main(System.String[])">
+            <summary>
+            App entry point.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            Web host builder.
+            </summary>
+        </member>
+        <member name="T:Saritasa.UnrealEstate.Web.Startup">
+            <summary>
+            Class that stores the app settings.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor of the <seealso cref="T:Saritasa.UnrealEstate.Web.Startup"/> class.
+            </summary>
+            <param name="configuration">App configuration.</param>
+        </member>
+        <member name="P:Saritasa.UnrealEstate.Web.Startup.Configuration">
+            <summary>
+            App configuration.
+            </summary>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure services.
+            </summary>
+            <param name="services">Service collection.</param>
+        </member>
+        <member name="M:Saritasa.UnrealEstate.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Configure the app.
+            </summary>
+            <param name="app">App builder.</param>
+            <param name="env">Hosting environment.</param>
+        </member>
+    </members>
+</doc>

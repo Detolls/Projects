@@ -1,0 +1,12 @@
+﻿@{ 
+    ViewData["Title"] = "OMDb Scrubber";
+}
+
+<h1>OMDb Scrubber</h1>
+
+<hr/>
+
+<form method="get">
+    <button type="submit" asp-controller="Movies" asp-action="List">List movies</button>
+    <button type="submit" asp-controller="Movies" asp-action="Upload">Upload movies</button>
+</form>
